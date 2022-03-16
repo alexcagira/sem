@@ -54,8 +54,12 @@ public class App
             try
             {
                 // Wait a bit for db to start
+
+                //Changing to '0' allows for fast connection with localhost:33060 [Originally 30000]
                 Thread.sleep(30000);
                 // Connect to database
+
+                // "localhost:33060" Makes a fast connection to the database. [Originally db:3306]
                 con = DriverManager.getConnection("jdbc:mysql://db:3306/employees?useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
                 break;
